@@ -1,16 +1,21 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.f855e6bc.css",
-    "main.js": "/portfolio/static/js/main.975cd6bf.js",
+    "main.css": "/portfolio/static/css/main.e6c13ad2.css",
+    "main.js": "/portfolio/static/js/main.c723e80a.js",
     "static/js/453.f272f9b6.chunk.js": "/portfolio/static/js/453.f272f9b6.chunk.js",
-    "static/media/logo.svg": "/portfolio/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/pongHero.png": "/portfolio/static/media/pongHero.77e253978b591b96d3e6.png",
+    "static/media/greenThumbsHero.png": "/portfolio/static/media/greenThumbsHero.32b5e648678330d382b3.png",
+    "static/media/chessMoves.png": "/portfolio/static/media/chessMoves.36f4ed7f8d22c048cb6d.png",
+    "static/media/chessStart.png": "/portfolio/static/media/chessStart.768ed92c97726fd24ada.png",
+    "static/media/chessHero.png": "/portfolio/static/media/chessHero.53328d448ce33a8db468.png",
+    "static/media/me.jpg": "/portfolio/static/media/me.6c25e5e69c260136915b.jpg",
     "index.html": "/portfolio/index.html",
-    "main.f855e6bc.css.map": "/portfolio/static/css/main.f855e6bc.css.map",
-    "main.975cd6bf.js.map": "/portfolio/static/js/main.975cd6bf.js.map",
+    "main.e6c13ad2.css.map": "/portfolio/static/css/main.e6c13ad2.css.map",
+    "main.c723e80a.js.map": "/portfolio/static/js/main.c723e80a.js.map",
     "453.f272f9b6.chunk.js.map": "/portfolio/static/js/453.f272f9b6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f855e6bc.css",
-    "static/js/main.975cd6bf.js"
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.c723e80a.js"
   ]
 }
