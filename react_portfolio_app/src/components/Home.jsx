@@ -6,7 +6,7 @@ import Skills from "./Skills"
 const Home = () => {
     return (
         <div style={{backgroundColor: '#4abdac', color: 'white',
-            margin: '0', paddingTop: '30px', paddingBottom: '30px', minHeight: '100vh'}}>
+            margin: '0', marginLeft: '50px', paddingTop: '30px', paddingBottom: '30px', minHeight: '100vh'}}>
             <AboutMe></AboutMe>
             <ProjectList></ProjectList>
             <Skills></Skills>

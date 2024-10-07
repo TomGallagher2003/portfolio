@@ -25,6 +25,7 @@ const Navbar = () => {
                 alignItems: 'center',
                 zIndex: '100',
                 overflow: 'hidden',
+                left: '0'
             }}
         >
             {/* Toggle button to expand/collapse */}
