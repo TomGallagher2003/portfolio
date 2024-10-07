@@ -4,6 +4,7 @@ import chessHero from '../images/chessHero.png';
 import greenThumbsHero from '../images/greenThumbsHero.png';
 import pongHero from '../images/pongHero.png';
 import dataHero from '../images/dataHero.png';
+import reactHero from '../images/reactHero.png';
 
 export const projects = {
     1: {
@@ -30,7 +31,8 @@ export const projects = {
         briefDescription: 'A petition manager app with a REST API and React frontend, built for SENG365.',
         description: 'I created a petition manager web application for SENG365, a web computing architecture course. This included a RESTful API to manage database interactions and a React application for the frontend. The tech stack includes React, Node.js, TypeScript, JSX, Material UI, CSS, and MySQL Relational Database.',
         link: null,
-        images: []
+        images: [],
+        heroImage: reactHero
     },
     4: {
         title: 'Pong Game - Microcontroller Project',

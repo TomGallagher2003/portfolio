@@ -9,7 +9,7 @@ const ProjectDetailsPage = () => {
 
     if (!project) {
         return (
-            <Box textAlign="center" mt={4}>
+            <Box textAlign="center" mt={4} sx={{backgroundColor: '#4abdac', color: 'white', margin: '0', paddingTop: '30px', paddingBottom: '30px', minHeight: '100vh'}}>
                 <Typography variant="h4" color="error">
                     Project not found
                 </Typography>
@@ -18,6 +18,7 @@ const ProjectDetailsPage = () => {
     }
 
     return (
+        <div style={{backgroundColor: '#4abdac', color: 'white', margin: '0', paddingTop: '30px', paddingBottom: '30px', minHeight: '100vh'}}>
         <Box
             sx={{
                 width: '80%',
@@ -26,6 +27,8 @@ const ProjectDetailsPage = () => {
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
+                backgroundColor: '#4abdac',
+                color: 'white'
             }}
         >
             <Typography variant="h3" component="h1" gutterBottom>
@@ -66,6 +69,7 @@ const ProjectDetailsPage = () => {
                 </Box>
             )}
         </Box>
+        </div>
     );
 };
 

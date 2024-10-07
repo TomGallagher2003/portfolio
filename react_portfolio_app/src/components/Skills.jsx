@@ -6,7 +6,7 @@ import SkillCategory from './SkillCategory';
 const Skills = () => {
     return (
         <Box id="skills" textAlign="center" py={4} sx={{ marginX: '50px', marginY: '20px' }}>
-            <Typography variant="h4" component="h2" gutterBottom sx={{ fontWeight: 'bold' }}>
+            <Typography variant="h4" component="h2" gutterBottom sx={{marginBottom: '25px', fontWeight: 'bold' }}>
                 Skills
             </Typography>
             <Grid container spacing={4} justifyContent="center">

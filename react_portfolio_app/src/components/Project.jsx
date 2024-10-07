@@ -1,10 +1,11 @@
 import React from 'react';
 import { Card, CardContent, Typography, CardMedia } from '@mui/material';
 import { Link } from 'react-router-dom';
+import scrollToTop from "../functions/ScrollToTop";
 
 const Project = ({ id, title, briefDescription, heroImage}) => {
     return (
-        <Link to={`/portfolio/projects/${id}`} style={{ textDecoration: 'none' }}>
+        <Link to={`/portfolio/projects/${id}`} style={{ textDecoration: 'none' }} onClick={scrollToTop}>
     <Card
         elevation={3}
         sx={{
@@ -16,7 +17,7 @@ const Project = ({ id, title, briefDescription, heroImage}) => {
             borderRadius: 2,
             padding: 1,
             backgroundColor: "#ffffff",
-            color: "#fc4a1a",
+            color: "#0d7765",
             transition: 'transform 0.3s ease',
             '&:hover': {
                 transform: 'scale(1.05)',

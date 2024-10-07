@@ -9,8 +9,8 @@ import projects from '../data/projects';
 const ProjectList = () => {
     return (
         <Box id="projects" textAlign="center" my={4} sx={{marginX: '50px', marginY: '20px' }}>
-            <Typography variant="h4" component="h2" gutterBottom>
-                My Projects
+            <Typography variant="h4" component="h2" gutterBottom sx={{marginBottom: '25px', fontWeight: 'bold' }}>
+                Projects
             </Typography>
             <Grid container spacing={4} justifyContent="center">
                 {Object.keys(projects).map((id) => (
