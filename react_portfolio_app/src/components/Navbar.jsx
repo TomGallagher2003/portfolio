@@ -12,6 +12,11 @@ const Navbar = () => {
         setIsExpanded((prev) => !prev);
     };
 
+    const scrollAndToggle = () => {
+        toggleNavbar();
+        scrollToTop();
+    };
+
     return (
         <AppBar
             position="fixed"
@@ -49,7 +54,7 @@ const Navbar = () => {
                             color="inherit"
                             component={Link}
                             to="/portfolio"
-                            onClick={scrollToTop}
+                            onClick={scrollAndToggle}
                             sx={{ marginBottom: 2 }}
                         >
                             Home
@@ -57,12 +62,21 @@ const Navbar = () => {
                         <Button
                             color="inherit"
                             component={Link}
-                            to="/portfolio/projects/1"
-                            onClick={scrollToTop}
+                            to="/portfolio/contact"
+                            onClick={scrollAndToggle}
                             sx={{ marginBottom: 2 }}
                         >
-                            Projects
+                            Contact
                         </Button>
+                        <a href="/cv.pdf" download="cv.pdf" style={{ color: "white" }}>
+                            <Button
+                                color="inherit"
+                                sx={{ marginBottom: 2 }}
+                                onClick={toggleNavbar}
+                            >
+                                Download my CV
+                            </Button>
+                        </a>
                     </Box>
                 )}
             </Toolbar>

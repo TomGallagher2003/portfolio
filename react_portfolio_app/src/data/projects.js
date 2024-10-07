@@ -5,6 +5,11 @@ import greenThumbsHero from '../images/greenThumbsHero.png';
 import pongHero from '../images/pongHero.png';
 import dataHero from '../images/dataHero.png';
 import reactHero from '../images/reactHero.png';
+import portfolioHero from '../images/portfolioHero.png'
+import GTgardenDetails from '../images/GTgardenDetails.png';
+import GTserviceBasic from '../images/GTserviceBasic.png';
+import GTqa from '../images/GTqa.png';
+import GTapplications from '../images/GTapplications.png';
 
 export const projects = {
     1: {
@@ -23,7 +28,10 @@ export const projects = {
         briefDescription: 'A Spring Boot app connecting gardening workers with clients, developed for SENG302.',
         description: 'I developed GreenThumbs as part of an 8-person team for SENG302, a full-year project course. GreenThumbs is a Spring Boot application that connects casual gardening workers with individuals looking for gardening tasks. The tech stack includes Java, Spring Boot, Vanilla JavaScript, HTML with Thymeleaf, CSS, MariaDB, SQL, JUnit, Cucumber, Nginx, Microsoft Azure Content Moderation, OpenWeather API, Geoapify Location API, and Flying Saucer. The production instance is available.',
         link: 'https://csse-s302g2.canterbury.ac.nz/prod',
-        images: [],
+        images: [{ title: 'Garden Details', src: GTgardenDetails },
+            { title: 'Service Request: Contractor View', src: GTserviceBasic },
+            { title: 'Questions and Answers: Owner View', src: GTqa },
+            { title: 'Application: Owner View', src: GTapplications }],
         heroImage: greenThumbsHero
     },
     3: {
@@ -49,7 +57,16 @@ export const projects = {
         link: null,
         images: [],
         heroImage: dataHero
+    },
+    6: {
+        title: 'Personal Portfolio Website',
+        briefDescription: 'A responsive portfolio website built with React and Material-UI to showcase my projects and skills.',
+        description: 'This is a modern, responsive portfolio website developed using React and Material-UI. It is designed to showcase my personal projects, skills, and contact information in a clean and structured manner. The website is fully responsive and includes dynamic sections for each project with links to the corresponding repositories. The interactive contact page will include email functionality powered by an API in a future update. The site is hosted using GitHub Pages for easy access.',
+        link: null,
+        images: [],
+        heroImage: portfolioHero
     }
+
 
 };
 

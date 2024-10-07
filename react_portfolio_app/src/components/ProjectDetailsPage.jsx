@@ -40,13 +40,13 @@ const ProjectDetailsPage = () => {
             </Typography>
 
             {project.images && project.images.length > 0 && (
-                <ImageList cols={2} gap={10} sx={{ width: '100%', marginTop: '20px' }}>
+                <ImageList cols={2} gap={10} sx={{ width: '100%'}}>
                     {project.images.map((image, index) => (
                         <ImageListItem
                             key={index}
                             sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center',}}
                         >
-                            <Typography variant="h5" display="block" gutterBottom>
+                            <Typography variant="h5" display="block" gutterBottom sx={{marginTop: '30px'}}>
                                 {image.title}
                             </Typography>
                             <img
