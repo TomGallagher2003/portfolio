@@ -1,5 +1,3 @@
-import chessStart from '../images/chessStart.png';
-import chessMoves from '../images/chessMoves.png';
 import chessHero from '../images/chessHero.png';
 import greenThumbsHero from '../images/greenThumbsHero.png';
 import pongHero from '../images/pongHero.png';
@@ -10,18 +8,23 @@ import GTgardenDetails from '../images/GTgardenDetails.png';
 import GTserviceBasic from '../images/GTserviceBasic.png';
 import GTqa from '../images/GTqa.png';
 import GTapplications from '../images/GTapplications.png';
+import java from '../images/java.png'
+import javaFx from '../images/javafx.png'
 
 export const projects = {
     1: {
         title: 'Chess Engine with Integrated Board GUI',
         briefDescription: 'A Java chess engine using minimax with alpha-beta pruning and a JavaFX-based GUI.',
-        description: 'I developed a chess engine in Java, utilising the minimax algorithm with alpha-beta pruning to evaluate positions recursively after each available move. The system uses bitboards for an efficient representation of the chessboard, with evaluations based on both piece value and positioning. It also includes an opening parser that processes PGN (Portable Game Notation) strings, allowing the engine to replicate grandmaster-level openings. The move engine is integrated with a JavaFX-based GUI, enabling users to play a complete game of chess against the program. This is a personal passion project.',
+        description: 'I developed a chess engine in Java, utilising the minimax algorithm with alpha-beta pruning to evaluate positions recursively after each available move. The system uses bitboards for an efficient representation of the chessboard, with evaluations based on both piece value and positioning. It also includes an opening parser that processes PGN (Portable Game Notation) strings, allowing the engine to replicate grandmaster-level openings. The move engine is integrated with a JavaFX-based GUI, enabling users to play a complete game of chess against the program. Below is a video of me getting cooked by the engine.',
         link: 'https://github.com/TomGallagher2003/ChessEngine',
-        images: [
-            { title: 'Initial Board Setup', src: chessStart },
-            { title: 'Visualisation of Legal Moves', src: chessMoves }
-        ],
-        heroImage: chessHero
+        images: [],
+        heroImage: chessHero,
+        video: '/videos/chessGame.mp4',
+        videoTitle: 'Chess Engine Demo',
+        technologies: [
+            { name: "Java", icon: java },
+            { name: "JavaFx", icon: javaFx },
+        ]
     },
     2: {
         title: 'GreenThumbs - Spring Boot Application',
