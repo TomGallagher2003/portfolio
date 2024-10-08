@@ -68,7 +68,7 @@ const Navbar = () => {
                         >
                             Contact
                         </Button>
-                        <a href="/cv.pdf" download="cv.pdf" style={{ color: "white" }}>
+                        <a href={`${process.env.PUBLIC_URL}/cv.pdf`} download="cv.pdf" style={{ color: "white" }}>
                             <Button
                                 color="inherit"
                                 sx={{ marginBottom: 2 }}
