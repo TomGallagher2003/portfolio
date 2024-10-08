@@ -8,8 +8,8 @@ import projects from '../data/projects';
 
 const ProjectList = () => {
     return (
-        <Box id="projects" textAlign="center" my={4} sx={{marginX: '50px', marginY: '20px' }}>
-            <Typography variant="h4" component="h2" gutterBottom sx={{marginBottom: '25px', fontWeight: 'bold' }}>
+        <Box id="projects" textAlign="center" my={4} sx={{marginLeft: '70px',  marginY: '70px' }}>
+            <Typography variant="h4" component="h2" gutterBottom sx={{marginLeft: '-50px', marginBottom: '25px', fontWeight: 'bold' }}>
                 Projects
             </Typography>
             <Grid container spacing={4} justifyContent="center">
