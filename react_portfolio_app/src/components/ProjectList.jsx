@@ -8,8 +8,34 @@ import projects from '../data/projects';
 
 const ProjectList = () => {
     return (
-        <Box id="projects" textAlign="center" my={4} sx={{marginLeft: '70px',  marginY: '70px' }}>
-            <Typography variant="h4" component="h2" gutterBottom sx={{marginLeft: '-50px', marginBottom: '25px', fontWeight: 'bold' }}>
+        <Box
+            id="projects"
+            textAlign="center"
+            sx={{
+                marginLeft: {
+                    xs: 0,        // No margin on mobile (hamburger menu)
+                    sm: '90px',   // Sidebar margin on tablet+
+                },
+                marginY: {
+                    xs: 4,        // 32px on mobile
+                    sm: 8,        // 64px on tablet+
+                },
+                paddingX: {
+                    xs: 2,        // 16px padding on mobile
+                    sm: 3,        // 24px padding on tablet+
+                },
+            }}
+        >
+            <Typography
+                variant="h4"
+                component="h2"
+                gutterBottom
+                sx={{
+                    fontWeight: 'bold',
+                    marginBottom: 4,
+                    color: 'primary.main',
+                }}
+            >
                 Projects
             </Typography>
             <Grid container spacing={4} justifyContent="center">

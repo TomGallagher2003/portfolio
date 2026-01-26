@@ -2,12 +2,10 @@ export const projects = {
     1: {
         title: 'Chess Engine with Integrated Board GUI',
         briefDescription: 'A Java chess engine using minimax with alpha-beta pruning and a JavaFX-based GUI.',
-        description: 'I developed a chess engine in Java, utilising the minimax algorithm with alpha-beta pruning to evaluate positions recursively after each available move. The system uses bitboards for an efficient representation of the chessboard, with evaluations based on both piece value and positioning. It also includes an opening parser that processes PGN (Portable Game Notation) strings, allowing the engine to replicate grandmaster-level openings. The move engine is integrated with a JavaFX-based GUI, enabling users to play a complete game of chess against the program. Below is a video of me getting cooked by the engine.',
+        description: 'I developed a chess engine in Java, utilising the minimax algorithm with alpha-beta pruning to evaluate positions recursively after each available move. The system uses bitboards for an efficient representation of the chessboard, with evaluations based on both piece value and positioning. It also includes an opening parser that processes PGN (Portable Game Notation) strings, allowing the engine to replicate grandmaster-level openings. The move engine is integrated with a JavaFX-based GUI, enabling users to play a complete game of chess against the program.',
         link: 'https://tomgallagher2003.github.io/ChessEngineOnline/',
         images: [],
         heroImage: '/images/chessHero.png',
-        video: '/videos/chessGame.mp4',
-        videoTitle: 'Chess Engine Demo',
         technologies: [
             { name: "Java", icon: '/images/java.png' },
             { name: "JavaFx", icon: '/images/javafx.png' },
@@ -19,8 +17,6 @@ export const projects = {
         description: 'I developed GreenThumbs as part of an 8-person team for SENG302, a full-year project course. GreenThumbs is a Spring Boot application that connects casual gardening workers with individuals looking for gardening tasks. The production instance is available now but may be shut down soon.',
         link: 'https://csse-s302g2.canterbury.ac.nz/prod',
         heroImage: '/images/greenThumbsHero.png',
-        video: '/videos/GreenThumbs.mp4',
-        videoTitle: 'Green Thumbs Demo',
         technologies: [
             { name: "Java", icon: '/images/java.png' },
             { name: "Spring Boot", icon: '/images/springboot.ico' },
@@ -38,8 +34,6 @@ export const projects = {
         briefDescription: 'A petition manager app with a REST API and React frontend, built for SENG365.',
         description: 'My first go at web development with react. I created a petition manager web application for SENG365, a web computing architecture course. This included a RESTful API to manage database interactions and a React application for the frontend. The tech stack includes React, Node.js, TypeScript, JSX, Material UI, CSS, and MySQL Relational Database.',
         link: null,
-        video: '/videos/petitions.mp4',
-        videoTitle: 'Petition Manager Demo',
         heroImage: '/images/reactHero.png',
         technologies: [
             { name: "React", icon: '/images/react.png' },

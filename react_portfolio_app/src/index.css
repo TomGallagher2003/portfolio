@@ -1,3 +1,68 @@
+/* CSS Custom Properties for Design System */
+:root {
+  /* Glassmorphism Variables */
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-bg-light: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-blur: 10px;
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+
+  /* Fallback for unsupported browsers */
+  --glass-bg-fallback: rgba(255, 255, 255, 0.95);
+
+  /* Animation Duration */
+  --animation-duration-fast: 150ms;
+  --animation-duration-base: 250ms;
+  --animation-duration-slow: 350ms;
+  --animation-duration-slower: 500ms;
+
+  /* Timing Functions */
+  --ease-out: cubic-bezier(0.33, 1, 0.68, 1);
+  --ease-in: cubic-bezier(0.32, 0, 0.67, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* Glassmorphism Utility Class with Browser Support Detection */
+@supports (backdrop-filter: blur(10px)) {
+  .glass-effect {
+    background: var(--glass-bg);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+
+  .glass-effect-light {
+    background: var(--glass-bg-light);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+}
+
+/* Fallback for browsers without backdrop-filter support */
+@supports not (backdrop-filter: blur(10px)) {
+  .glass-effect,
+  .glass-effect-light {
+    background: var(--glass-bg-fallback);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+  }
+}
+
+/* Accessibility: Respect User's Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

@@ -4,16 +4,51 @@ import myFace from '../images/me.jpg';
 
 const AboutMe = () => {
     return (
-        <Box id="about" textAlign="center" my={4} sx={{ marginBottom: '45px', marginTop: "50px"}}>
-            <Typography variant="h3" sx={{ marginBottom: '30px' }}>
+        <Box
+            id="about"
+            textAlign="center"
+            sx={{
+                marginY: {
+                    xs: 4,      // 32px on mobile
+                    sm: 6,      // 48px on tablet+
+                },
+                paddingX: {
+                    xs: 2,      // 16px padding on mobile
+                    sm: 0,      // No extra padding on tablet+
+                },
+            }}
+        >
+            <Typography
+                variant="h3"
+                sx={{
+                    marginBottom: 4,
+                    fontWeight: 600,
+                    color: 'primary.main',
+                }}
+            >
                 Tom Gallagher | Portfolio
             </Typography>
             <Avatar
-                alt="My face should be here"
+                alt="Tom Gallagher"
                 src={myFace}
-                sx={{ width: 100, height: 100, margin: 'auto', marginBottom: '30px'}}
+                sx={{
+                    width: { xs: 80, sm: 100 },
+                    height: { xs: 80, sm: 100 },
+                    margin: 'auto',
+                    marginBottom: 4,
+                    border: '3px solid',
+                    borderColor: 'primary.light',
+                }}
             />
-            <Typography variant="body1">
+            <Typography
+                variant="body1"
+                sx={{
+                    maxWidth: 600,
+                    margin: '0 auto',
+                    lineHeight: 1.7,
+                    fontSize: { xs: '1rem', sm: '1.125rem' },
+                }}
+            >
                 Hi! I'm Tom Gallagher, a third-year Software Engineering student at UC. Finish the description.
             </Typography>
         </Box>
