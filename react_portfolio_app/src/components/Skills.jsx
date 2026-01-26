@@ -5,8 +5,34 @@ import SkillCategory from './SkillCategory';
 
 const Skills = () => {
     return (
-        <Box id="skills" textAlign="center" py={4} sx={{ marginX: '50px', marginY: '20px' }}>
-            <Typography variant="h4" component="h2" gutterBottom sx={{marginBottom: '25px', fontWeight: 'bold' }}>
+        <Box
+            id="skills"
+            textAlign="center"
+            sx={{
+                paddingY: {
+                    xs: 4,      // 32px on mobile
+                    sm: 5,      // 40px on tablet+
+                },
+                marginX: {
+                    xs: 2,      // 16px margin on mobile
+                    sm: 4,      // 32px margin on tablet+
+                },
+                marginY: {
+                    xs: 3,      // 24px on mobile
+                    sm: 4,      // 32px on tablet+
+                },
+            }}
+        >
+            <Typography
+                variant="h4"
+                component="h2"
+                gutterBottom
+                sx={{
+                    marginBottom: 4,
+                    fontWeight: 'bold',
+                    color: 'primary.main',
+                }}
+            >
                 Skills
             </Typography>
             <Grid container spacing={4} justifyContent="center">
