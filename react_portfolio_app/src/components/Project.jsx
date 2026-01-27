@@ -8,25 +8,27 @@ const Project = ({ id, title, briefDescription, heroImage}) => {
         <Link to={`/portfolio/projects/${id}`} style={{ textDecoration: 'none' }} onClick={scrollToTop}>
     <Card
         className="glass-effect"
-        elevation={3}
+        elevation={0}
         sx={{
             maxWidth: 345,
             height: 290,
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            borderRadius: 3, // 12px - lg from design system
+            borderRadius: 4, // 16px - xl from design system
             padding: 1,
-            transition: 'all 250ms cubic-bezier(0.33, 1, 0.68, 1)',
+            background: 'rgba(20, 20, 26, 0.7)',
+            backdropFilter: 'blur(16px)',
+            WebkitBackdropFilter: 'blur(16px)',
+            border: '1px solid rgba(255, 255, 255, 0.08)',
+            boxShadow: '0 4px 24px -1px rgba(0, 0, 0, 0.2), 0 0 1px 0 rgba(255, 255, 255, 0.05) inset',
+            transition: 'all 250ms cubic-bezier(0.4, 0, 0.2, 1)',
             '&:hover': {
-                transform: 'translateY(-4px)', // Lift effect
-                boxShadow: 10, // Elevation increase
+                transform: 'translateY(-4px)',
+                background: 'rgba(20, 20, 26, 0.85)',
+                borderColor: 'rgba(255, 255, 255, 0.12)',
+                boxShadow: '0 12px 40px -4px rgba(0, 0, 0, 0.3), 0 0 1px 0 rgba(255, 255, 255, 0.1) inset',
             },
-            // Ensure text readability on glass background
-            '& .MuiCardContent-root': {
-                backgroundColor: 'rgba(255, 255, 255, 0.9)',
-                borderRadius: '0 0 12px 12px',
-            }
         }}
     >
         {/* Add Hero Image */}
@@ -42,12 +44,12 @@ const Project = ({ id, title, briefDescription, heroImage}) => {
             }}
         />
 
-        <CardContent sx={{ flexGrow: 1 }}>
+        <CardContent sx={{ flexGrow: 1, backgroundColor: 'transparent' }}>
             <Typography
                 variant="h5"
                 component="div"
                 sx={{
-                    color: 'primary.main',
+                    color: '#F5F5F7',
                     fontWeight: 600,
                     mb: 1,
                 }}
@@ -57,7 +59,7 @@ const Project = ({ id, title, briefDescription, heroImage}) => {
             <Typography
                 variant="body2"
                 sx={{
-                    color: 'text.primary',
+                    color: '#A1A1AA',
                     lineHeight: 1.6,
                 }}
             >

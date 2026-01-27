@@ -5,19 +5,24 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle'; // Icon for skill
 const SkillCategory = ({ category, skills }) => {
     return (
         <Paper
-            className="glass-effect-light"
-            elevation={3}
+            className="glass-effect"
+            elevation={0}
             sx={{
                 padding: 3,
-                borderRadius: 3, // 12px - lg from design system
+                borderRadius: 4, // 16px - xl from design system
                 height: '100%',
-                transition: 'all 250ms cubic-bezier(0.33, 1, 0.68, 1)',
+                background: 'rgba(20, 20, 26, 0.7)',
+                backdropFilter: 'blur(16px)',
+                WebkitBackdropFilter: 'blur(16px)',
+                border: '1px solid rgba(255, 255, 255, 0.08)',
+                boxShadow: '0 4px 24px -1px rgba(0, 0, 0, 0.2), 0 0 1px 0 rgba(255, 255, 255, 0.05) inset',
+                transition: 'all 250ms cubic-bezier(0.4, 0, 0.2, 1)',
                 '&:hover': {
-                    transform: 'translateY(-2px)', // Subtle lift
-                    boxShadow: 6,
+                    transform: 'translateY(-2px)',
+                    background: 'rgba(20, 20, 26, 0.85)',
+                    borderColor: 'rgba(255, 255, 255, 0.12)',
+                    boxShadow: '0 8px 32px -4px rgba(0, 0, 0, 0.25), 0 0 1px 0 rgba(255, 255, 255, 0.08) inset',
                 },
-                // Semi-transparent background for readability
-                backgroundColor: 'rgba(255, 255, 255, 0.9)',
             }}
         >
             <Typography
@@ -26,7 +31,7 @@ const SkillCategory = ({ category, skills }) => {
                 gutterBottom
                 sx={{
                     fontWeight: 600,
-                    color: 'primary.main',
+                    color: '#0066FF',
                     mb: 2,
                 }}
             >
@@ -37,7 +42,7 @@ const SkillCategory = ({ category, skills }) => {
                     <ListItem key={index} sx={{ py: 0.5 }}>
                         <CheckCircleIcon
                             sx={{
-                                color: 'success.main',
+                                color: '#22C55E',
                                 marginRight: 1.5,
                                 fontSize: '1.25rem',
                             }}
@@ -46,7 +51,7 @@ const SkillCategory = ({ category, skills }) => {
                             primary={skill}
                             sx={{
                                 '& .MuiTypography-root': {
-                                    color: 'text.primary',
+                                    color: '#F5F5F7',
                                     fontSize: '0.95rem',
                                 }
                             }}

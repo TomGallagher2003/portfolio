@@ -67,7 +67,7 @@ const ProjectDetailsPage = () => {
                     gutterBottom
                     sx={{
                         fontWeight: 600,
-                        color: 'primary.main',
+                        color: '#F5F5F7',
                         mb: 3,
                     }}
                 >
@@ -82,6 +82,7 @@ const ProjectDetailsPage = () => {
                         lineHeight: 1.7,
                         fontSize: { xs: '1rem', sm: '1.125rem' },
                         mb: 5,
+                        color: '#A1A1AA',
                     }}
                 >
                     {project.description}
@@ -91,11 +92,16 @@ const ProjectDetailsPage = () => {
                 <Grid container spacing={4} justifyContent="center" sx={{ mt: 2, mb: 4 }}>
                     <Grid item xs={12} md={6}>
                         <Paper
-                            className="glass-effect-light"
-                            elevation={3}
+                            className="glass-effect"
+                            elevation={0}
                             sx={{
                                 padding: 3,
-                                backgroundColor: 'rgba(255, 255, 255, 0.9)',
+                                borderRadius: 4,
+                                background: 'rgba(20, 20, 26, 0.7)',
+                                backdropFilter: 'blur(16px)',
+                                WebkitBackdropFilter: 'blur(16px)',
+                                border: '1px solid rgba(255, 255, 255, 0.08)',
+                                boxShadow: '0 4px 24px -1px rgba(0, 0, 0, 0.2), 0 0 1px 0 rgba(255, 255, 255, 0.05) inset',
                             }}
                         >
                             <Typography
@@ -104,7 +110,7 @@ const ProjectDetailsPage = () => {
                                 sx={{
                                     marginBottom: 3,
                                     fontWeight: 600,
-                                    color: 'primary.main',
+                                    color: '#0066FF',
                                 }}
                             >
                                 Technologies Used
@@ -118,7 +124,7 @@ const ProjectDetailsPage = () => {
                                             loading="lazy"
                                             style={{ width: '24px', height: '24px' }}
                                         />
-                                        <Typography variant="body1">{tech.name}</Typography>
+                                        <Typography variant="body1" sx={{ color: '#F5F5F7' }}>{tech.name}</Typography>
                                     </Box>
                                 ))}
                             </Box>
@@ -150,7 +156,7 @@ const ProjectDetailsPage = () => {
                                     textAlign: 'center',
                                 }}
                             >
-                                <Typography variant="h5" display="block" gutterBottom sx={{ marginTop: 4 }}>
+                                <Typography variant="h5" display="block" gutterBottom sx={{ marginTop: 4, color: '#F5F5F7' }}>
                                     {image.title}
                                 </Typography>
                                 <img
@@ -168,7 +174,23 @@ const ProjectDetailsPage = () => {
                 {project.link && (
                     <Box mt={4}>
                         <Link href={project.link} target="_blank" rel="noopener noreferrer" underline="none">
-                            <Button variant="contained" color="primary" size="large">
+                            <Button
+                                variant="contained"
+                                size="large"
+                                sx={{
+                                    background: 'linear-gradient(135deg, #0066FF 0%, #6B3FA0 100%)',
+                                    color: '#FFFFFF',
+                                    fontWeight: 600,
+                                    px: 4,
+                                    py: 1.5,
+                                    borderRadius: 2,
+                                    transition: 'all 250ms cubic-bezier(0.4, 0, 0.2, 1)',
+                                    '&:hover': {
+                                        transform: 'translateY(-2px)',
+                                        boxShadow: '0 8px 24px -4px rgba(0, 102, 255, 0.4)',
+                                    },
+                                }}
+                            >
                                 Visit Project
                             </Button>
                         </Link>
