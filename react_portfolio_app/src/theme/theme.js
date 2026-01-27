@@ -1,9 +1,10 @@
 import { createTheme } from '@mui/material/styles';
 
-// Design System Theme
-// Based on design_system.md specifications
+// Design System Theme - Dark Glassmorphism 2026
+// Based on DESIGN_SYSTEM.md specifications
 export const theme = createTheme({
   palette: {
+    mode: 'dark',
     primary: {
       main: '#0066FF', // Electric Blue
       light: '#4D94FF',
@@ -17,31 +18,37 @@ export const theme = createTheme({
       contrastText: '#FFFFFF',
     },
     neutral: {
-      dark: '#1A1A1A',
-      light: '#F5F5F5',
-      main: '#757575',
+      dark: '#0A0A0F',
+      light: '#F5F5F7',
+      main: '#A1A1AA',
     },
     background: {
-      default: '#F5F5F5',
-      paper: '#FFFFFF',
+      default: '#0A0A0F', // Deep Charcoal
+      paper: '#14141A', // Elevated Surface
     },
     text: {
-      primary: '#1A1A1A',
-      secondary: '#757575',
+      primary: '#F5F5F7',
+      secondary: '#A1A1AA',
     },
     success: {
-      main: '#4CAF50',
+      main: '#22C55E',
     },
     warning: {
-      main: '#FF9800',
+      main: '#F59E0B',
     },
     error: {
-      main: '#F44336',
+      main: '#EF4444',
     },
+    info: {
+      main: '#3B82F6',
+    },
+    divider: 'rgba(255, 255, 255, 0.08)',
   },
 
   typography: {
     fontFamily: [
+      '"Space Grotesk"',
+      '"Inter"',
       '-apple-system',
       'BlinkMacSystemFont',
       '"Segoe UI"',
