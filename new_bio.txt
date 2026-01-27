@@ -1,0 +1,7 @@
+Hi! I'm Tom Gallagher, a Software Engineering student at the University of Canterbury.
+
+I'm passionate about building modern, user-focused applications with clean code and intuitive design. My interests span full-stack development, with experience in React, Python, Java, and cloud technologies.
+
+Currently focused on expanding my skills in web development and exploring new technologies. I enjoy tackling complex problems and creating solutions that make a real impact.
+
+I'm actively seeking opportunities to collaborate on interesting projects and grow as a developer. Feel free to reach out!

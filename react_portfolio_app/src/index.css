@@ -1,14 +1,52 @@
-/* CSS Custom Properties for Design System */
+/* CSS Custom Properties for Design System - Dark Glassmorphism 2026 */
 :root {
-  /* Glassmorphism Variables */
-  --glass-bg: rgba(255, 255, 255, 0.1);
-  --glass-bg-light: rgba(255, 255, 255, 0.15);
-  --glass-border: rgba(255, 255, 255, 0.2);
-  --glass-blur: 10px;
-  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  /* Colors - Background */
+  --color-bg-primary: #0A0A0F;
+  --color-bg-elevated: #14141A;
+  --color-bg-tertiary: #1E1E26;
+
+  /* Colors - Text */
+  --color-text-primary: #F5F5F7;
+  --color-text-secondary: #A1A1AA;
+  --color-text-muted: #71717A;
+
+  /* Colors - Accent */
+  --color-electric-blue: #0066FF;
+  --color-vivid-purple: #6B3FA0;
+
+  /* Colors - Border */
+  --color-border-subtle: #27272A;
+  --color-border-accent: #3F3F46;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #0066FF 0%, #6B3FA0 100%);
+  --gradient-ambient-blue: radial-gradient(circle at 20% 80%, rgba(0, 102, 255, 0.15) 0%, transparent 50%);
+  --gradient-ambient-purple: radial-gradient(circle at 80% 20%, rgba(107, 63, 160, 0.15) 0%, transparent 50%);
+
+  /* Dark Glassmorphism Variables */
+  --glass-bg: rgba(20, 20, 26, 0.7);
+  --glass-bg-light: rgba(20, 20, 26, 0.5);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-blur: 16px;
+  --glass-shadow: 0 4px 24px -1px rgba(0, 0, 0, 0.2), 0 0 1px 0 rgba(255, 255, 255, 0.05) inset;
 
   /* Fallback for unsupported browsers */
-  --glass-bg-fallback: rgba(255, 255, 255, 0.95);
+  --glass-bg-fallback: rgba(20, 20, 26, 0.95);
+
+  /* Spacing (8px grid) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-8: 3rem;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
 
   /* Animation Duration */
   --animation-duration-fast: 150ms;
@@ -20,10 +58,11 @@
   --ease-out: cubic-bezier(0.33, 1, 0.68, 1);
   --ease-in: cubic-bezier(0.32, 0, 0.67, 0);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-default: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Glassmorphism Utility Class with Browser Support Detection */
-@supports (backdrop-filter: blur(10px)) {
+@supports (backdrop-filter: blur(16px)) {
   .glass-effect {
     background: var(--glass-bg);
     backdrop-filter: blur(var(--glass-blur));
@@ -39,10 +78,16 @@
     border: 1px solid var(--glass-border);
     box-shadow: var(--glass-shadow);
   }
+
+  .glass-effect:hover,
+  .glass-effect-light:hover {
+    background: rgba(20, 20, 26, 0.8);
+    border-color: rgba(255, 255, 255, 0.12);
+  }
 }
 
 /* Fallback for browsers without backdrop-filter support */
-@supports not (backdrop-filter: blur(10px)) {
+@supports not (backdrop-filter: blur(16px)) {
   .glass-effect,
   .glass-effect-light {
     background: var(--glass-bg-fallback);
@@ -65,14 +110,40 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  min-height: 100vh;
+}
+
+/* Ambient gradient background for depth */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gradient-ambient-blue), var(--gradient-ambient-purple);
+  pointer-events: none;
+  z-index: -1;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: 'JetBrains Mono', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Focus states for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-electric-blue);
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
 }

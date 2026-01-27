@@ -31,9 +31,9 @@ const ProjectList = () => {
                 component="h2"
                 gutterBottom
                 sx={{
-                    fontWeight: 'bold',
+                    fontWeight: 700,
                     marginBottom: 4,
-                    color: 'primary.main',
+                    color: '#F5F5F7',
                 }}
             >
                 Projects

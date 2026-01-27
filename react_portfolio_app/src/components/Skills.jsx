@@ -29,8 +29,8 @@ const Skills = () => {
                 gutterBottom
                 sx={{
                     marginBottom: 4,
-                    fontWeight: 'bold',
-                    color: 'primary.main',
+                    fontWeight: 700,
+                    color: '#F5F5F7',
                 }}
             >
                 Skills
