@@ -51,12 +51,12 @@ const HamburgerMenu = () => {
                     zIndex: 1300,
                     width: 48,
                     height: 48,
-                    backgroundColor: 'primary.main',
+                    background: 'linear-gradient(135deg, #0066FF 0%, #6B3FA0 100%)',
                     color: 'white',
-                    transition: 'all 150ms cubic-bezier(0.33, 1, 0.68, 1)',
+                    transition: 'all 150ms cubic-bezier(0.4, 0, 0.2, 1)',
                     '&:hover': {
-                        backgroundColor: 'primary.dark',
                         transform: 'scale(1.05)',
+                        boxShadow: '0 4px 16px rgba(0, 102, 255, 0.4)',
                     },
                     '&:active': {
                         transform: 'scale(0.95)',
@@ -78,12 +78,15 @@ const HamburgerMenu = () => {
                         width: '80vw',
                         maxWidth: 300,
                         padding: 3,
-                        backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                        background: 'rgba(10, 10, 15, 0.95)',
+                        backdropFilter: 'blur(20px)',
+                        WebkitBackdropFilter: 'blur(20px)',
+                        borderLeft: '1px solid rgba(255, 255, 255, 0.06)',
                     },
                 }}
                 sx={{
                     '& .MuiBackdrop-root': {
-                        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                        backgroundColor: 'rgba(0, 0, 0, 0.6)',
                     },
                 }}
             >
@@ -104,13 +107,17 @@ const HamburgerMenu = () => {
                             sx={{
                                 width: 44,
                                 height: 44,
+                                color: '#F5F5F7',
+                                '&:hover': {
+                                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                                },
                             }}
                         >
                             <CloseIcon />
                         </IconButton>
                     </Box>
 
-                    <Divider sx={{ mb: 2 }} />
+                    <Divider sx={{ mb: 2, borderColor: 'rgba(255, 255, 255, 0.08)' }} />
 
                     {/* Navigation Links */}
                     <List sx={{ flexGrow: 1 }}>
@@ -125,8 +132,7 @@ const HamburgerMenu = () => {
                                         minHeight: 48,
                                         transition: 'all 150ms ease-out',
                                         '&:hover': {
-                                            backgroundColor: 'primary.light',
-                                            color: 'white',
+                                            backgroundColor: 'rgba(0, 102, 255, 0.2)',
                                             transform: 'translateX(4px)',
                                         },
                                     }}
@@ -136,6 +142,7 @@ const HamburgerMenu = () => {
                                         primaryTypographyProps={{
                                             fontSize: '1.125rem',
                                             fontWeight: 500,
+                                            color: '#F5F5F7',
                                         }}
                                     />
                                 </ListItemButton>
@@ -143,7 +150,7 @@ const HamburgerMenu = () => {
                         ))}
                     </List>
 
-                    <Divider sx={{ mb: 2 }} />
+                    <Divider sx={{ mb: 2, borderColor: 'rgba(255, 255, 255, 0.08)' }} />
 
                     {/* Download CV Button */}
                     <Box sx={{ mt: 'auto' }}>
@@ -157,7 +164,11 @@ const HamburgerMenu = () => {
                             sx={{
                                 minHeight: 48,
                                 fontSize: '1rem',
-                                fontWeight: 500,
+                                fontWeight: 600,
+                                background: 'linear-gradient(135deg, #0066FF 0%, #6B3FA0 100%)',
+                                '&:hover': {
+                                    boxShadow: '0 4px 16px rgba(0, 102, 255, 0.4)',
+                                },
                             }}
                         >
                             Download CV

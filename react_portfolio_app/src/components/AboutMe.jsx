@@ -9,12 +9,12 @@ const AboutMe = () => {
             textAlign="center"
             sx={{
                 marginY: {
-                    xs: 4,      // 32px on mobile
-                    sm: 6,      // 48px on tablet+
+                    xs: 4,
+                    sm: 6,
                 },
                 paddingX: {
-                    xs: 2,      // 16px padding on mobile
-                    sm: 0,      // No extra padding on tablet+
+                    xs: 2,
+                    sm: 0,
                 },
             }}
         >
@@ -22,34 +22,54 @@ const AboutMe = () => {
                 variant="h3"
                 sx={{
                     marginBottom: 4,
-                    fontWeight: 600,
-                    color: 'primary.main',
+                    fontWeight: 700,
+                    background: 'linear-gradient(135deg, #0066FF 0%, #6B3FA0 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
                 }}
             >
-                Tom Gallagher | Portfolio
+                Tom Gallagher
             </Typography>
             <Avatar
                 alt="Tom Gallagher"
                 src={myFace}
                 sx={{
-                    width: { xs: 80, sm: 100 },
-                    height: { xs: 80, sm: 100 },
+                    width: { xs: 100, sm: 120 },
+                    height: { xs: 100, sm: 120 },
                     margin: 'auto',
                     marginBottom: 4,
                     border: '3px solid',
-                    borderColor: 'primary.light',
+                    borderColor: '#0066FF',
+                    boxShadow: '0 0 20px rgba(0, 102, 255, 0.3)',
                 }}
             />
             <Typography
                 variant="body1"
                 sx={{
-                    maxWidth: 600,
+                    maxWidth: 650,
                     margin: '0 auto',
-                    lineHeight: 1.7,
+                    lineHeight: 1.8,
                     fontSize: { xs: '1rem', sm: '1.125rem' },
+                    color: '#A1A1AA',
                 }}
             >
-                Hi! I'm Tom Gallagher, a third-year Software Engineering student at UC. Finish the description.
+                Hi! I'm Tom Gallagher, a Software Engineering student at the University of Canterbury.
+                I'm passionate about building modern, user-focused applications with clean code and intuitive design.
+                My interests span full-stack development, with experience in React, Python, Java, and cloud technologies.
+            </Typography>
+            <Typography
+                variant="body1"
+                sx={{
+                    maxWidth: 650,
+                    margin: '16px auto 0',
+                    lineHeight: 1.8,
+                    fontSize: { xs: '1rem', sm: '1.125rem' },
+                    color: '#A1A1AA',
+                }}
+            >
+                Currently focused on expanding my skills in web development and exploring new technologies.
+                I enjoy tackling complex problems and creating solutions that make a real impact.
             </Typography>
         </Box>
     );

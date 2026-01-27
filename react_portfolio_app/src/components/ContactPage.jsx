@@ -32,9 +32,9 @@ const ContactPage = () => {
                 variant="h4"
                 gutterBottom
                 sx={{
-                    fontWeight: 'bold',
+                    fontWeight: 700,
                     mb: 4,
-                    color: 'primary.main',
+                    color: '#F5F5F7',
                 }}
             >
                 Contact Information
